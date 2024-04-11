@@ -1,0 +1,75 @@
+.wrapper {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.selectWrapper {
+  min-height: 16px;
+  min-width: 250px;
+  border-radius: 4px;
+  background-color: white;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.selectWrapper svg {
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 5px);
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  max-height: 160px;
+  overflow-y: scroll;
+  border-radius: 4px;
+}
+
+.listWrapper::-webkit-scrollbar {
+  width: 4px;
+  background-color: white;
+}
+
+.listWrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(63, 66, 84, 0.15);
+  width: 2px;
+  border-radius: 2px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: white;
+  font-size: 13px;
+  line-height: 16px;
+  width: auto;
+}
+
+.listItem:hover {
+  background: #e4eaff;
+  cursor: pointer;
+}
+
+.selectedItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background-color: white;
+  border: 2px #4971ff solid;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.selectedItem:hover {
+  background: #e4eaff;
+  cursor: pointer;
+}
