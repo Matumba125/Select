@@ -13,6 +13,7 @@ const UserSelect = () => {
 
   const handleOpenSelect = (event: MouseEvent<HTMLDivElement>) => {
     event.stopPropagation();
+    loadMoreUsers();
     setOpen((prevState) => !prevState);
   };
 
@@ -65,6 +66,7 @@ const UserSelect = () => {
                 />
               );
             })}
+            {isLoading && <div>Loading...</div>}
           </div>
         )}
       </div>

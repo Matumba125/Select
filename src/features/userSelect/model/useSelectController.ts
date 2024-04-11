@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MetaDataType, UserDataType, Users } from "../api/userSelectApi";
 
 type ControllerData = {
@@ -30,12 +30,6 @@ export const useSelectController = (): ControllerData => {
       }
     }
   };
-
-  useEffect(() => {
-    if (usersList.length === 0) {
-      loadMoreUsers();
-    }
-  }, []);
 
   return { usersList, loadMoreUsers, isLoading };
 };
